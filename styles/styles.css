@@ -273,6 +273,8 @@ h3 {
 
 #about p { margin: 0px; }
 
+#about a { color: darkgreen; }
+
 #parees {
     margin: 0px;
 }
@@ -316,7 +318,10 @@ h3 {
 }
 
 /* -------------- Service page -------------- */
-#services h2, #services p { color: #f2f2f2; }
+#services { 
+	background: #eee;  }
+
+#services h2, #services p { color: #3f3f3f; }
 
 #serviceList .w3-card {  
 	width: 220px; 
@@ -537,7 +542,6 @@ caption {
     }
 
     /* -------------- Service page -------------- */
-	#services h2, #services p { color: #f2f2f2; }
 	#serviceList .w3-card {  
 		margin-top: 40px; }
 	
