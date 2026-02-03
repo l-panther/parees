@@ -1,399 +1,498 @@
 <!DOCTYPE html>
-<html lang="en">
- 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Responsive -->
-		<meta name="description" content="Advertising professional Hairdresser services"> <!-- Description -->
-		<meta name="keywords" content="Professional Hairdresser, London Hairdresser,Relaxer,Remy hair,Bridal,Parees Taylor"> <!-- Keywords -->
-        <meta name="author" content="Leroy Russsell"> <!-- Author -->
-        <title>Parees Taylor | Hairdreeser of excellence</title> <!-- Title -->
-		<link rel="icon" href="images/logo/logo.ico">
+<html lang="en-GB">
+<head>
+  <!-- Meta Tags for SEO and Accessibility -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert hairdressing services by Parees Taylor. Offering professional cuts, styling, coloring, and treatments for both men and women. Book your appointment today!" />
+  <meta name="keywords" content="Hairdresser, Professional Hair Stylist, Haircuts, Hair Styling, Hair Coloring, Men's Haircuts, Women's Haircuts, Hair Treatments, Salon Services, Parees Taylor" />
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="styles/w3.css" /> <!-- My CSS -->
-		<link rel="stylesheet" href="styles/styles.css" /> <!-- My CSS -->
-		
-	</head>
-		
-	<body data-spy="scroll">
-		
-		<!-- Skip link for top of page -->
-		<a href="#main" title="Skip to main" class="skiplink">Skip to main content</a>
+  <meta name="author" content="Leroy Russell">
+  <title>Parees Taylor Hair| Award-winning Professional Hair Stylist</title>
 
-		
-		<header role="banner">
-			<!-- Navigation -->
-			<nav role="navigation" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" id="primarynav">
+  <!-- W3.CSS and Custom Styles -->
+  <link rel="icon" href="assets/images/logo/logo.ico">
 
-				<!-- Image Logo -->
-				<h1 class="w3-left"><img src="images/logo/logo.png" alt="Company Logo" id="logo" class="w3-left">Parees <span class="w3-hide-small">Taylor<br><span class="subtitle"> Hairdresser of Excellence</span></span></h1>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 
-				<!-- Mobile Menu Toggle Button -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler open"><i class="fa fa-bars"></i></span>
-					<span class="navbar-toggler close"><i class="fa fa-times"></i></span>
-				</button>
-				<!-- End of mobile menu toggle button -->
+  <!-- Splide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-				<div class="collapse navbar-collapse" id="navbarLinks">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#services">Services</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#hair">Remy Hair</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#testimonials">Testimonials</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#contact">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</nav> <!-- end of navbar -->
-			<!-- end of navigation -->
-		</header> <!-- End banner -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
-			
-		<main role="main">
-			<!-- Home -->	
-			<div id="home">
-				<!-- Banner -->
-				<div class="main-content2 w3-animate-opacity" id="banner">
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
 
-					<!-- Small screen -->
-					<div class="w3-row w3-hide-medium w3-hide-large ">
-						<div class="w3-col s12 w3-center w3-text-white green-bg slogan">
-							<h2>Styling...</h2>
-							<p>bring out your inner queen..</p><br>
-							<a href="#services">OUR SERVICES</a>
-						</div>
+    <!-- Sidebar (Menu) for mobile -->
+    <ion-menu content-id="main-content" type="overlay" side="end" id="sidebar">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title><img src="assets/images/logo/logo.png" alt="Logo for SC cleaning" class="logo sidebar-logo"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list>
+          <ion-item class="active">
+            <a href="#home" class="active">Home</a>
+          </ion-item>
+          <ion-item routerLink="#">
+            <a href="#services">Our services</a>
+          </ion-item>
+          <ion-item routerLink="#">
+            <a href="#about">About us</a>
+          </ion-item>
+          <ion-item routerLink="#">
+            <a href="#contact" class="btn">Contact us</a>
+          </ion-item>
+          <ion-item routerLink="#">
+            <a href="#map" class="btn">Find us</a>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
 
-						<div class="w3-col s12">
-							<img src="images/banner/index-small.png" alt="Women posing with an afro" class="w3-hide-medium w3-hide-large">
-						</div>
-					</div> <!-- End small screen -->
+    <!-- Main content -->
+    <ion-content class="ion-page" id="main-content">
+      <ion-header id="header">
+        <ion-toolbar id="navbar" class="main-content">
+          <!-- Logo -->
+          <ion-title slot="start"><img src="assets/images/logo/logo.png" alt="Logo for SC cleaning" class="logo"></ion-title>
 
-					<!-- Large screen -->
-					<div class="w3-display-container w3-hide-small">
+          <!-- Burger Menu Button (Visible on mobile) -->
+          <ion-buttons slot="end" class="burger-menu-mobile ion-hide-lg-up">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
 
-						 <div class="w3-container w3-text-white w3-display-middle">
-							<h2>Styling...</h2>
-							<p>bring out your inner queen..</p><br>
-							<a href="#services">OUR SERVICES</a>
+          <!-- Desktop Navbar Links -->
+          <div slot="end" class="nav-links-desktop ion-hide-lg-down">
+            <a href="#home" aria-label="Go to Home" class="active">Home</a>
+            <a href="#services" aria-label="Go to Services">Our Services</a>
+            <a href="#about" aria-label="Go to About Us">About Us</a>
+            <a href="#contact" aria-label="Go to Contact">Contact Us</a>
+            <a href="#map" aria-label="Go to Map">Find Us</a>
+          </div>
+        </ion-toolbar>
+      </ion-header>
 
-						</div>
+      <!-- Carousel -->
+      <div id="hero">
+        <div class="splide main-content" id="image-slider" aria-label="Image carousel showcasing different hair services">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <picture>
+                  <source media="(min-width: 650px)" srcset="assets/images/hero/styling-mid.jpg">
+                  <source media="(min-width: 992px)" srcset="assets/images/hero/styling.jpg">
+                  <img src="assets/images/hero/styling-small.jpg" alt="Hair styling options for different hair types" />
+                </picture> 
+              </li>
+              <li class="splide__slide">
+                <picture>
+                  <source media="(min-width: 650px)" srcset="assets/images/hero/remy-hair-mid.jpg">
+                  <source media="(min-width: 992px)" srcset="assets/images/hero/remy-hair.jpg">
+                  <img src="assets/images/hero/remy-hair-small.jpg" alt="100% Remy Hair styled" />
+                </picture>
+              </li>
+              <li class="splide__slide">
+                <picture>
+                  <source media="(min-width: 650px)" srcset="assets/images/hero/colour-mid.jpg">
+                  <source media="(min-width: 992px)" srcset="assets/images/hero/colour.jpg">
+                  <img src="assets/images/hero/colour-small.jpg" alt="Hair colour services" />
+                </picture>
+              </li>
+              <li class="splide__slide">
+                <picture>
+                  <source media="(min-width: 650px)" srcset="assets/images/hero/bridal-mid.jpg">
+                  <source media="(min-width: 992px)" srcset="assets/images/hero/bridal.jpg">
+                  <img src="assets/images/hero/bridal-small.jpg" alt="Bridal hair styling" />
+                </picture>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-						<img src="images/banner/index-mid.png" alt="Banner" class="w3-hide-small w3-hide-large">
-						<img src="images/banner/index-large.png" alt="Women posing with an afro" class="w3-hide-small w3-hide-medium">
+      <!-- Welcome -->
+      <section id="welcome" aria-labelledby="welcome-heading">
+        <ion-grid class="main-content">
+          <ion-row>
+            <ion-col size="12">
+              <article class="welcome">
+                <h2 id="welcome-heading" class="ion-text-center">
+                  Welcome to Parees Taylor Hair
+                </h2>
 
-					</div> <!-- End large screen -->
-				</div>
-				<!-- End banner -->
+              <p>
+                Welcome to Parees Taylor Hair. Parees is an award-winning professional hair stylist
+                loved by her clients and respected by her peers. If you're looking for a new look,
+                Parees Taylor Hair is the place to give your style that something extra.
+                Parees specialises in weaves even if you have problem areas.
+              </p>
 
-				<div id="demo"></div>
+              <p>
+                At Parees Taylor Hair, we believe that every client deserves a personalized experience
+                that leaves them feeling confident and beautiful. Whether you’re looking to transform
+                your look or address specific hair challenges, Parees offers expert solutions tailored
+                to your unique needs.
+              </p>
+            </article>
+          </ion-col>
+        </ion-row>
+
+        <!-- Promise -->
+        <div id="promise">
+          <ion-row class="ion-text-center">
+            <ion-col size="12" size-lg="4">
+              <img src="assets/images/main/afro.png"
+                  alt="100% Remy Hair - Afro texture" />
+              <h3>Remy Hair</h3>
+              <p>
+                Parees Taylor offers 100% premium Remy hair, known for its natural look,
+                silky texture, and long-lasting quality.
+              </p>
+            </ion-col>
+
+            <ion-col size="12" size-lg="4">
+              <img src="assets/images/main/comb.png"
+                  alt="Easy to maintain hair" />
+              <h3>Easy to Maintain</h3>
+              <p>
+                Enjoy hassle-free beauty with easy-to-maintain styles,
+                designed for lasting freshness and effortless care.
+              </p>
+            </ion-col>
+
+            <ion-col size="12" size-lg="4">
+              <img src="assets/images/main/quality.png"
+                  alt="Consistent quality hair" />
+              <h3>Consistent Quality</h3>
+              <p>
+                Experience consistent quality with every service,
+                ensuring flawless results and long-lasting beauty.
+              </p>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-grid>
+    </section>
+
+    <!-- Services -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="main-content ion-text-center">
+        <article>
+          <h2 id="services-heading" class="ion-text-center">Our Services</h2>
+          <ion-grid>
+            <ion-row id="serviceList">
+            <!-- Services injected here -->
+            </ion-row>
+          </ion-grid>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <ion-grid class="main-content">
+        <ion-row>
+          <ion-col size="12" size-lg="8">
+            <h2 id="about-heading">About Parees</h2>
+            <p>Parees has over 20 years of experience in the black hair industry.</p>
+
+            <blockquote>
+              "Inspired by my own experiences and customer feedback, I realised that buying quality hair weave can be a lottery. The quality is often compromised meaning textures vary from pack to pack. Parees Remi hair uses only the finest 100% Remi hair to ensure consistency in every pack. The hair is natural looking, easy to maintain, tangle-free, and available in different textures to suit all hair types."
+            </blockquote>
+          </ion-col>
+
+          <ion-col size="12" size-lg="4" class="ion-text-center">
+            <img src="assets/images/main/pareestaylor.jpg"
+                alt="Portrait of Parees Taylor"
+                title="Parees Taylor" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="ion-padding" aria-labelledby="contact-heading">
+      <ion-grid class="main-content">
+        <ion-row>
+          <ion-col size="12">
+            <h2 id="contact-heading" class="ion-text-center">Get In Touch</h2>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12">
+
+            <!-- Success/Error Popup -->
+            <div id="popup"
+                class="popup"
+                role="alertdialog"
+                aria-modal="true"
+                aria-labelledby="popupTitle"
+                aria-describedby="popupMessage"
+                >
+
+              <h2 id="popupTitle" class="sr-only">Form status</h2>
+
+              <p id="popupMessage" tabindex="-1">
+                Message sent successfully
+              </p>
+
+              <span id="closePopupButton"
+                      class="close-popup"
+                      aria-label="Close message">
+                &times;
+              </span>
+            </div>
+
+            <!-- If JavaScript is disabled, the form will not have novalidate -->
+            <noscript>
+              <style>
+                /* Temporarily remove novalidate to enable HTML5 form validation */
+                #contactForm[novalidate] {
+                  display: none;
+                }
+                #contactForm {
+                  display: block;
+                }
+              </style>
+              <script>
+                // This inline script will be ignored if JavaScript is disabled
+                document.getElementById('contactForm').removeAttribute('novalidate');
+              </script>
+            </noscript>
+
+            <form id="contactForm" novalidate>
+
+              <!-- Success/Error Popup -->
+              <div id="form-errors"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                  hidden>
+                <h3><strong>Please fix the following errors:</strong></h3>
+                <ul id="field-errors" class="field-errors"></ul>
+              </div>
+
+              <!-- Name -->
+              <label for="name" class="sr-only">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter name"
+                required
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-z\s]+"
+                title="Name should contain letters only">
+
+              <!-- Email -->
+              <label for="email" class="sr-only">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+                required>
+
+              <!-- Service -->
+              <label for="service" class="sr-only">Service</label>
+              <select
+                id="service"
+                name="service"
+                required>
+                <option value="" disabled selected>Choose service</option>
+                <option value="styling">Hair Styling</option>
+                <option value="colour">Colour</option>
+                <option value="bridal">Bridal</option>
+              </select>
+
+              <!-- Message -->
+              <label for="message" class="sr-only">Message</label>
+              <textarea placeholder="Enter your message"
+                id="message"
+                name="message"
+                minlength="10"
+                maxlength="200"
+                rows="3"
+                required></textarea>
+
+              <!-- Word Count -->
+              <div id="wordCount" class="word-count" aria-live="polite">
+                0 / 200
+              </div>
+
+              <!-- Submit -->
+              <button type="submit">
+                Send Message
+              </button>
+
+            </form>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <!-- Map -->
+    <section id="map" aria-labelledby="map-heading">
+      <div class="main-content">
+        <h2 id="map-heading" class="ion-text-center">Find Us</h2>
+        <div id="map-canvas" role="region" aria-label="Parees Taylor Hair location map" style="height:400px; width:100%;"></div>
+      </div>
+    </section>   
+
+    <!-- Footer -->
+    <footer id="footer" class="w3-center section" role="contentinfo">
+      <h2>Connect With Us</h2>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Like us on Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Follow us on Twitter">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Follow us on Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+
+      <p class="small w3-margin-top">Parees Taylor Ltd, Registered Office: Maybrook House, 97 Godstone Road, Caterham, Surrey, CR3 6RE. Company No. 07055710</p>
+      <p class="small">&copy; <span id="currentDate"></span> Parees Taylor | By <span class="theme-color">Leroy Russell</span></p>
+    
+    </footer>
+  </ion-content>
+
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  <!-- Ionic -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+ 
+  <!-- Splide JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Get services -->
+  <script src="assets/js/getServices.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let date = new Date().getFullYear();
+      document.getElementById("currentDate").textContent = date;
+    });
+
+    // This script will execute when JS is enabled and will apply novalidate
+    document.getElementById('contactForm').setAttribute('novalidate', '');
+    console.log('JavaScript is enabled!'); // This will log only when JS is enabled
+  </script>
+
+  <script>
+    // Get the ion-menu component
+    const menu = document.querySelector('ion-menu');
+
+    // Function to close the sidebar on resize if the screen width is >= 768px (Desktop)
+    function closeSidebarOnResize() {
+        // If the screen width is greater than or equal to 768px and the menu is open, close the menu
+        if (window.innerWidth >= 768 && menu.open) {
+            menu.close();
+        }
+    }
+
+    // Add event listener for window resize
+    window.addEventListener('resize', closeSidebarOnResize);
+
+    // Close the menu when a link is clicked inside the menu
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.close();
+        });
+    });
+
+    // Initial check on load in case the screen size is large (desktop) when the page loads
+    closeSidebarOnResize();
+  </script>
 
 
-				<div class="main-content spacing">
-					<article class="w3-container w3-center">
-						<h2>Parees Taylor</h2>
-						<p class="w3-margin-bottom">Welcome To Parees Taylor Hair. If you're someone looking for a new look, a new vibe, then Parees Taylor Hair is the place to visit to give your look that something extra. No matter what your hair problems. She specalizes in weaves even if you have problem areas.</p>
-					</article>
-
-					<div class="introduction">
-						<div class="w3-row w3-center">
-							<div class="w3-col s12 m4 l4">
-								<dl>
-									<dt id="stylist">
-										<img src="images/main/comb.png" alt="Comb and scissors">
-									</dt>
-									<dd aria-labelledby="stylist">
-										<h3>Top Stylists</h3>
-									</dd>
-								</dl>
-
-							</div>
-
-							<div class="w3-col s12 m4 l4">
-								<dl>
-									<dt id="quality">
-										<img src="images/main/quality.png" alt="1st prize medal">
-									</dt>
-									<dd aria-labelledby="quality">
-										<h3>High Quality</h3>
-									</dd>
-								</dl>
-							</div>
-
-							<!-- -->
-							<div class="w3-col s12 m4 l4">
-								<dl>
-									<dt id="afro">
-										<img src="images/main/afro.png" alt="Afro comb">
-									</dt>
-									<dd aria-labelledby="afro">
-										<h3>Afro Hair</h3>
-									</dd>
-								</dl>
-
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-			<!-- End home -->
 
 
-			<!-- Services -->
-			<div id="services" class="spacing">
-				<article class="w3-container main-content" id="basic-services">
-					<h2>Our Services</h2>
-
-					<p class="w3-center">All the services you need to keep you looking good for all occasions.</p>
-
-					<div class="row" id="serviceList">
-					</div>
-				</article>
-			</div>
-			<!-- End services -->
 
 
-			<!-- Hair -->
-			<div id="hair" class="green-bg spacing"> 
-				<!-- Row-->
-				<article class="w3-container w3-row main-content"> 
-					<h2>Why Remy?</h2>
-					<p class="w3-center">Remy hair can be ordered online at <a href="#" class="w3-text-light-grey">www.pareestaylor.co.uk</a> and will be available in 5 
-						different textures and a variety of natural looking shades</p>
-
-					<!-- Column -->
-					<div id="hair-benefits">
-						<div class="w3-col s12 m6 l7">
-							<h3>What are the benefits?</h3>
-							<ul>
-								<li><i class="fa fa-check"></i>100% Indian Hair</li>
-								<li><i class="fa fa-check"></i>Lasts up to 12 months</li>
-								<li><i class="fa fa-check"></i>Consistent Quality</li>
-								<li><i class="fa fa-check"></i>Easy to maintain</li>
-								<li><i class="fa fa-check"></i>No Shedding</li>
-								<li><i class="fa fa-check"></i>No Dulling</li>
-								<li><i class="fa fa-check"></i>No Compromise</li>
-							</ul>
-						</div>
-					</div> <!-- End column -->
-
-					<!-- Column -->
-					<div class="w3-col s12 m6 l5 w3-center w3-animate-right">
-						<img src="images/main/remy-large.png" alt="Remy Hair" class="">
-					</div> 
-					<!-- End column -->
-
-				</article> <!-- End row -->
-			</div>
-			<!-- End hair -->
 
 
-			<!-- About -->
-			<div id="about" class="spacing background-white">
-				<div class="w3-row-padding main-content">
-					<aside class="w3-center w3-col s12 m7 l8">
-						<h2>About Parees</h2>
-						<p class="w3-margin-bottom">
-							Parees Taylor is an award winning professional 
-							hair stylist loved by her clients and respected by her peers. </p>
-						<p>A hair stylist who understands hair and over 20 years experience. </p>  
 
-						<p class="w3-margin-top">
-							Find Parees Taylor at:<a href="#myModal" data-toggle="modal" data-target="#mapModal"><br>55B Thurlestone Road<br>London<br>SE27 0PE</a>.</p>                
-					</aside>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize map
+  const map = L.map('map-canvas').setView([51.4320, -0.1140], 16);
 
-					<!-- Figure -->
-					<figure class="w3-col s12 m4 l4 w3-center w3-text-grey w3-medium" id="parees">
-						<img src="images/main/pareestaylor.jpg" alt="Parees Taylor" title="Parees Taylor"/>
+  // Add tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
 
-					</figure> <!-- End figure -->
-				</div> <!-- End row -->
+  // Red marker icon
+  const redIcon = L.icon({
+    iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+    iconSize: [25, 41],       // width, height
+    iconAnchor: [12, 41],     // tip of the marker
+    popupAnchor: [-200, -41],    // popup above tip
+    shadowSize: [41, 41]
+  });
 
-			</div> 
-			<!-- End about -->
+  // Store info
+  const store = {
+    name: "Parees Taylor Hair",
+    address: "123 Streatham High Rd, London, SW16 1AA",
+    category: "Hair Salon",
+    coords: [51.4320, -0.1140],
+    description: "Award-winning hair styling and treatment."
+  };
 
+  // Popup content
+  const popupContent = `
+    <div class="store-popup">
+      <strong>${store.name}</strong><br>
+      ${store.address}<br>
+      <em>${store.category}</em><br>
+      ${store.description}<br>
+      <button onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=${store.coords[0]},${store.coords[1]}','_blank')">Get Directions</button>
+    </div>
+  `;
 
-			<!-- Testimonials -->
-			<div id="testimonials" class="spacing w3-light-grey">
-				<div class="w3-row-padding main-content">
-					<article class="w3-col s12 w3-center">
-						<h2>What the people say</h2>
+  // Add marker (popup will follow marker naturally)
+  const marker = L.marker(store.coords, { icon: redIcon }).addTo(map);
+  marker.bindPopup(popupContent, { maxWidth: 400 }).openPopup();
 
-						<div class="w3-padding-32">
-							<img src="images/main/client.jpg" alt="Profile image"> 
-							<p><i class="fa fa-quote-left w3-text-dark-grey"></i></p>
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  // User location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const userIcon = L.divIcon({ className: 'user-location-dot', html: '📍' });
+      L.marker([pos.coords.latitude, pos.coords.longitude], { icon: userIcon })
+        .addTo(map)
+        .bindPopup("<strong>You are here</strong>");
+    });
+  }
 
-								<!-- Wrapper for slides -->
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<p>Professional service at an affordable price</p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star grey"></i>
-										<h4><b>Client 1</b></h4>
-									</div>
+  // Fix map rendering inside Ionic
+  setTimeout(() => map.invalidateSize(), 200);
+});
 
-									<!-- Testimonial 1 -->
-									<div class="carousel-item ">
-										<p>I am always satisfied with the service provided</p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<h4><b>Client 2</b></h4>
-									</div>
-
-									<!-- Testimonial 2 -->
-									<div class="carousel-item ">
-										<p>Perfect styling for afro hair</p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<h4><b>Client 3</b></h4>
-									</div>
-
-									<!-- Testimonial 3 -->
-									<div class="carousel-item ">
-										<p>Okay overall</p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star grey"></i>
-										<i class="fa fa-star grey"></i>
-										<h4><b>Client 4</b></h4>
-									</div>
-
-								</div>
-							</div>
-						</div>
-					</article>
-				</div> <!-- End row -->
-			</div> 
-			<!-- End testimonials -->
-		</main> <!-- End main -->
-
-		<!-- Skiplink -->
-		<div id="toTop" class="w3-bar w3-center w3-padding 8">
-			<a href="#home" class="w3-text-white">Top of page</a>
-		</div>
-		<!-- End skiplink -->
-
-		
-		<!-- Footer -->
-		<footer role="contentinfo" id="footer">
-			
-			<!-- Contact container -->
-			<div class="w3-container w3-row main-content" id="contact"> 
-
-				<div class="w3-col s12 m6 l7">
-
-					<h2>Contact Us</h2>
-
-					<div class="w3-col s12 m12 l12" id="phone">
-						<a href="tel:+44(0)2087618450" title="Call the office"><i class="fa fa-phone"></i></a>
-						<p>0208 761 8450</p>
-					</div>
-
-					<div class="w3-col s12 m12 l12" id="mobile">
-						<a href="tel:+44(0)7956873450" title="Call me direct"><i class="fa fa-mobile-phone"></i></a>
-						<p>07956 873 450</p>
-					</div>
-
-					<div class="w3-col s12 m12 l12" id="email">
-
-						<a href="mailto:pareestaylor@gmail.com" title="Email me"><i class="fa fa-envelope"></i></a>
-						<p>pareestaylor@gmail.com</p>
-
-					</div>
-				</div>
-
-				<!-- Opening -->
-				<div class="w3-col s12 m4 l5" id="opening">
-
-					<h2>Opening hours</h2>
-					<table class="w3-table w3-hoverable w3-black">
-						<caption>Opening Hours</caption>
-						<tr>
-							<th scope="col" class="w3-hide">Day</th>
-							<th scope="col" class="w3-hide">Time</th>
-						</tr>
-						<tr>
-							<td>Mon</td>
-							<td>10am-7pm</td>
-						</tr>
-						<tr>
-							<td>Tue</td>
-							<td>Closed</td>
-						</tr>
-
-						<tr>
-							<td>Wed</td>
-							<td>10am-7pm</td>
-						</tr>
-						<tr>
-							<td>Thu</td>
-							<td>10am-7pm</td>
-						</tr>
-						<tr>
-							<td>Fri</td>
-							<td>10am-7pm</td>
-						</tr>
-						<tr>
-							<td>Sat</td>
-							<td>8.30am-7pm</td>
-						</tr>
-						<tr>
-							<td>Sun</td>
-							<td>Closed</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			<!-- End contact container -->
-
-			<!-- Social links -->
-			<div class="w3-center sociallinks">
-				<a href="https://www.facebook.com/" target="_blank"><img src="images/social/facebook.png" alt="Facebook link" title="Like me"></a>
-				<a href="https://twitter.com/" target="_blank"><img src="images/social/twitter.png" alt="Twitter link" title="Tweet me"></a>
-				<a href="https://www.instagram.com" target="_blank"><img src="images/social/instagram.png" alt="Instagram link" title="Snap me"></a>
-
-				<p id="copyright" class="w3-container w3-medium">
-					Parees Taylor Ltd, Registered Office: Maybrook House, 97 Godstone Road, Caterham, Surrey, CR3 6RE. Company No. 07055710
-				</p>
-				<p class="w3-medium w3-margin-top">Created by Leroy Russell &copy; <span id="currentDate"></span> Parees</p>
-			</div>
-			<!-- End social links -->
-		</footer>
-		<!-- End footer -->
-		
-
-		<!-- All JavaScript Files -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery -->
-		<script src="scripts/popper.min.js"></script> <!-- jQuery -->
-		<script src="scripts/bootstrap.min.js"></script> <!-- jQuery -->
-		
-		<script src="scripts/getServices.js"></script> <!-- Show cafes -->
-		<script>
-			var currentDate = new Date();
-			$("#currentDate").html(currentDate.getFullYear());
-		</script> 
-	</body> <!-- End body -->
-</html> <!-- End  html -->
+</script>
+</body>
+</html>
